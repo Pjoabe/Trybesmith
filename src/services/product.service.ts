@@ -6,4 +6,8 @@ const createProductInDatabase = async (product: IProduct) => {
   return result;
 };
 
-export default { createProductInDatabase };
+const retrieveAllProducts = async () => {
+  const products = await productModel.getAllProducts();
+  return products;
+};
+export default { createProductInDatabase, retrieveAllProducts };
